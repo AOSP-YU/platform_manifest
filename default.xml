@@ -29,6 +29,7 @@
   <project path="external/android-mock" name="platform_external_android-mock" remote="github" />
   <project path="external/ant-wireless/ant_native" name="platform_external_ant-wireless_ant_native" remote="github" />
   <project path="external/apache-http" name="platform_external_apache-http" remote="github" />
+  <project path="external/connectivity" name="platform_external_connectivity" remote="github" />
   <project path="external/e2fsprogs" name="platform_external_e2fsprogs" remote="github" />
   <project path="external/elfutils" name="platform_external_elfutils" remote="github" />
   <project path="external/f2fs-tools" name="platform_external_f2fs-tools" remote="github" />
