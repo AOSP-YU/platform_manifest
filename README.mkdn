@@ -14,3 +14,30 @@ To initialize your local repository using the YU-AOSP trees, use a command like 
 Then to sync up:
 
     repo sync
+
+Building the source
+---------------
+
+The source at AOSP-YU is well configured for building for two devices: Yureka(tomato), and Yuphoria(lettuce). For other devices, you might have to manually add device trees and make relevant changes. Build system for Yureka is straight forward, while Yuphorias' build needs one more command to function well.
+
+FOR YUREKA (tomato)
+
+Once you have synced the source, you are good to build for Yureka(tomato). Just give the following commands to get the rom on output. Make sure that you are in your working directory while you execute these set of commands.
+
+    $ . build/envsetup.sh
+    $ lunch aosp_tomato-userdebug
+    $ make -jX otapackage
+
+where X is the number of jobs you would like to allot to the build system.
+
+FOR YUPHORIA (lettuce)
+
+The build for Yuphoria is easy, but needs extra steps to complete. Give the following set of commands to get a fully-functional build of AOSP on output. Make sure you have `curl` installed on your build machine.
+
+    $ curl --create-dirs -L -o .repo/local_manifests/roomservice.xml -O -L https://raw.githubusercontent.com/C-Aniruddh/aosp_manifest/master/roomservice.xml
+    $ repo sync -jX
+    $ . build/envsetup.sh
+    $ lunch aosp_lettuce-userdebug
+    $ make -jX otapackage
+    
+where X is the number of jobs you would like to allot to the build system.
