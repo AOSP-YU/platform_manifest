@@ -89,7 +89,17 @@
   <project path="vendor/qcom/opensource/dpm" name="platform_vendor_qcom-opensource_dpm" remote="github" />
   <project path="vendor/qcom/opensource/time-services" name="platform_vendor_qcom-opensource_time-services" remote="github" />
   
+<!-- BEGIN DEVICE SPECIFIC REPOS -->
+  <project path="device/cyanogen/msm8916-common" name="platform_device_cyanogen_msm8916-common" remote="github" />
+  <project path="device/cyanogen/msm8939-common" name="platform_device_cyanogen_msm8939-common" remote="github" />
+  <project path="device/yu/tomato" name="platform_device_yu_tomato" remote="github" />
+  <project path="device/yu/lettuce" name="platform_device_yu_lettuce" remote="github" />
+  <project path="kernel/cyanogen/msm8916" name="platform_kernel_cyanogen_msm8916" remote="github" />
+  <project path="vendor/yu" name="platform_vendor_yu" remote="github" />
+<!-- END DEVICE SPECIFIC REPOS -->
+  
 <!-- BEGIN CYANOGENMOD -->
+  <project path="external/sony/boringssl-compat" name="CyanogenMod/android_external_sony_boringssl-compat" remote="cm" />
   <project path="hardware/qcom/audio/default" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="cm" />
   <project path="hardware/qcom/audio-caf/msm8916" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-13.0-caf-8916" remote="cm" />
   <project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" groups="qcom" remote="cm" />
